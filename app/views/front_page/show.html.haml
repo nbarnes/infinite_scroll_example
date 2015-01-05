@@ -1,0 +1,9 @@
+Welcome to the infinite scroll demo
+%br
+%br
+
+= image_tag 'ajax_loading.gif', id: "loading_gif"
+
+#posts_list
+  - @posts.each do |post|
+    = render 'post', post: post

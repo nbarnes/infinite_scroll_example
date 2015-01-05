@@ -1,0 +1,5 @@
+
+<% @new_posts.each do |post| %>
+  $('#posts_list').append("<%= escape_javascript render 'post', post: post %>");
+<% end %>
+$('#loading_gif').hide();
