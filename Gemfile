@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby "2.0.0"
 
 gem 'rails', '4.1.6'
 gem 'pg'
@@ -13,6 +14,9 @@ gem 'turbolinks'
 gem 'jquery-rails'
 
 gem 'httparty'
+
+# for heroku
+gem 'rails_12factor'
 
 group :development, :test do
   gem 'pry'
