@@ -13,6 +13,8 @@ gem 'turbolinks'
 
 gem 'jquery-rails'
 
+gem 'activerecord-session_store'
+
 gem 'httparty'
 
 # for heroku

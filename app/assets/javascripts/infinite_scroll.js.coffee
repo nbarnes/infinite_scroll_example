@@ -1,19 +1,21 @@
 $ ->
 
+  throttle = false
+
   $(window).scroll () ->
-    if page_scroll_at_bottom()
+    if page_scroll_at_bottom() && (throttle == false)
       load_more_posts()
 
   page_scroll_at_bottom = ->
-    scroll_height = $(document).height()
-    scroll_position = $(window).height() + $(window).scrollTop()
-    return (scroll_height - scroll_position) == 0
+    return $(window).scrollTop() >= $(document).height() - $(window).height()
 
   load_more_posts = ->
+    throttle = true
+    setTimeout (-> throttle = false), 1000
     $('#loading_gif').show()
     $.getScript "/more_posts"
 
   # CONSIDER:
   # how to handle no-more-posts condition
-  # throttle (debounce?) scroll events
   # put easement buffer into page_scroll_at_bottom
+  # how to dynamically adjust posts loaded at a time based on window size

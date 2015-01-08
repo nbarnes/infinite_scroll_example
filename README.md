@@ -8,7 +8,7 @@ This app is built on Ruby on Rails with Coffeescript, HAML, and, of course, HTML
 
 WHERE
 =====
-This demo is not currently available live.
+This demo is available for your entertainment at http://endless-scroll-demo.herokuapp.com/
 
 ABOUT ME
 ========
